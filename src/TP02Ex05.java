@@ -1,3 +1,5 @@
+// Autores: Rodrigo Rebelo, Guilherme Pontes
+
 //5. Armazenar seis valores em uma matriz de ordem 3x2. Apresentar os valores na tela.
 
 import static java.lang.System.out;
@@ -5,7 +7,7 @@ import java.util.Scanner;
 
 public class TP02Ex05 {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
 
         int[][] v = new int[3][2];

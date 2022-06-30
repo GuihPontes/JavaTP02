@@ -1,3 +1,5 @@
+// Autores: Rodrigo Rebelo, Guilherme Pontes
+
 /*10. Entrar com uma matriz de ordem MxM, onde a ordem também será escolhida pelo usuário, sendo que no máximo será de ordem 10 e quadrática.
 Após a digitação dos elementos, calcular e exibir a matriz inversa. Exibir as matrizes na tela, sob a forma matricial (linhas x colunas).*/
 
@@ -6,10 +8,10 @@ import java.util.Scanner;
 
 public class TP02Ex10 {
 
-    private int Determinante(int m, int[][] v){
+    private int Determinante(int m, int[][] v) {
         int det = 0;
 
-        switch(m){
+        switch (m) {
             case 1:
                 det = v[0][0];
 
@@ -21,7 +23,8 @@ public class TP02Ex10 {
                 break;
 
             default:
-                det = (v[0][0] * v[1][1] * v[2][2] + v[0][1] * v[1][2] * v[2][0] + v[0][2] * v[1][0] * v[2][1] - (v[0][2] * v[1][1] * v[2][0] + v[0][0] * v[1][2] * v[2][1] + v[0][1] * v[1][0] * v[2][2]));
+                det = (v[0][0] * v[1][1] * v[2][2] + v[0][1] * v[1][2] * v[2][0] + v[0][2] * v[1][0] * v[2][1]
+                        - (v[0][2] * v[1][1] * v[2][0] + v[0][0] * v[1][2] * v[2][1] + v[0][1] * v[1][0] * v[2][2]));
 
                 break;
         }
@@ -29,8 +32,7 @@ public class TP02Ex10 {
         return det;
     }
 
-
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
         int m;
 
@@ -50,7 +52,7 @@ public class TP02Ex10 {
 
         out.println();
 
-        if(m < 4){
+        if (m < 4) {
             int det = Determinante(m, v);
 
             out.println("Determinante: " + det);
@@ -59,8 +61,7 @@ public class TP02Ex10 {
                 out.println("A matriz é inversível");
             else
                 out.println("A matriz não é inversível");
-        }
-        else
+        } else
             out.println("Use o Teorema de Laplace");
 
         out.print("\n-------------- V --------------\n");

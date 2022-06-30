@@ -1,3 +1,5 @@
+// Autores: Rodrigo Rebelo, Guilherme Pontes
+
 /*9. Entrar com uma matriz de ordem MxN, onde a ordem também será escolhida pelo usuário, sendo que no máximo 10x10. A matriz não precisa ser quadrática.
 Após a digitação dos elementos, calcular e exibir a matriz transposta.*/
 
@@ -6,7 +8,7 @@ import java.util.Scanner;
 
 public class TP02Ex09 {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner scan = new Scanner(System.in);
 
         int m, n;
@@ -30,16 +32,12 @@ public class TP02Ex09 {
             }
         }
 
-
-
         for (int i = 0; i < m; i++) {
             for (int j = 0; j < n; j++) {
                 out.print("[" + v[i][j] + "] ");
             }
             out.println();
         }
-
-
 
         for (int i = 0; i < n; i++) {
             for (int j = 0; j < m; j++) {

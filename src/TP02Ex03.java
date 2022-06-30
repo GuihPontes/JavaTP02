@@ -1,3 +1,5 @@
+// Autores: Rodrigo Rebelo, Guilherme Pontes
+
 /*Entrar via teclado com “N” valores quaisquer. O valor “N” (que representa a quantidade de números) será digitado, deverá ser positivo,
 porém menor que vinte. Caso a quantidade não satisfaça a restrição, enviar mensagem de erro e solicitar o valor novamente.
 Após a digitação dos “N” valores, exibir:
@@ -15,7 +17,7 @@ import java.util.Scanner;
 
 public class TP02Ex03 {
 
-    public static void main(String[] args){
+    public static void main(String[] args) {
         Scanner ler = new Scanner(System.in);
 
         int maior, menor, soma = 0, n, x;
@@ -34,11 +36,10 @@ public class TP02Ex03 {
             maior = x;
             menor = x;
 
-            if(x < 0)
+            if (x < 0)
                 neg++;
-            if(x > 0)
+            if (x > 0)
                 pos++;
-
 
             for (int i = 2; i <= n; i++) {
                 out.print("Informe o " + i + "º número: ");
@@ -46,20 +47,20 @@ public class TP02Ex03 {
 
                 soma += x;
 
-                if(x > maior)
+                if (x > maior)
                     maior = x;
-                if(x < menor)
+                if (x < menor)
                     menor = x;
-                if(x < 0)
+                if (x < 0)
                     neg++;
-                if(x > 0)
+                if (x > 0)
                     pos++;
             }
 
             media = soma / n;
 
-            neg = (neg/n)*100;
-            pos = (pos/n)*100;
+            neg = (neg / n) * 100;
+            pos = (pos / n) * 100;
 
             out.println("Maior: " + maior +
                     "\nMenor: " + menor +
